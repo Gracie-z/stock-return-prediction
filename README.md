@@ -35,6 +35,8 @@ jupyter nbconvert --execute --to notebook --inplace --ExecutePreprocessor.timeou
 
 Data columns: `date`, `open`, `high`, `low`, `close`, `volume`, `Name`. Prices are USD per share. Data source: [S&P 500 stock data](https://www.kaggle.com/datasets/camnugent/sandp500); notebook references are listed in its Sources section.
 
+Pooled models use `ColumnTransformer` and `Pipeline` to learn stock indicators from training rows only. Numeric features stay unscaled.
+
 Missing sessions stay missing before returns and lags are calculated. asset_337/asset_137 price adjustments need further review. Five selected stocks and one validation period do not establish a trading edge.
 
 Asset IDs are pseudonyms. Price, volume, calendar dates and row order are preserved.
